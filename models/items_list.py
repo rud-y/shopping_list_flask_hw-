@@ -8,3 +8,7 @@ item5 = Item("eggs", 1.50, 12, True)
 item6 = Item("rocket", 0.75, 1, True)
 
 items = [item1, item2, item3, item4, item5, item6]
+
+
+def add_new_item(item):
+    items.append(item)

@@ -11,8 +11,20 @@
     <p><i>Bought</i></p>
     {% endif %}
 
+   
 </div>
     
 {% endfor %}
     
+<form class="form_add_item" action="/items" method="post">
+    <label for="name">Item:</label>
+    <input type="text" name="name" id="name">
+    <label for="price">Price:</label>
+    <input type="text" name="price" id="price">
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" id="quantity">
+    <label for="bought">Bought?</label>
+    <input type="checkbox" name="bought" id="bought" value="False">
+    <input type="submit" value="Add item">
+</form>
 {% endblock  %}
