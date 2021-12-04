@@ -3,15 +3,14 @@
 {% block  content %}
 {% for item in items %}
 <div class="item">
-     <h2>{{item.name}}</h2>
-     <h3>{{item.price}}</h3>
-     <h4>{{item.quantity}}</h4>
+<ul>
+    <li>{{item.name}} / {{item.price}} / {{item.quantity}}
 
     {% if item.bought %}
-    <p><i>Bought</i></p>
+    <span>☑️</span>
     {% endif %}
-
-   
+</li>
+</ul>
 </div>
     
 {% endfor %}
@@ -27,4 +26,14 @@
     <input type="checkbox" name="bought" id="bought" value="False">
     <input type="submit" value="Add item">
 </form>
+
+<form class="filter_through" action="/items/bought_items">
+    <select name="filter" id="item_select">
+        <option value="">--Filter--</option>
+        <option value="bought">Bought</option>
+        <option value="not_bought">Not bought yet</option>
+    </select>
+    <input type="submit" value="Select" id="">
+</form>
+
 {% endblock  %}

@@ -18,3 +18,8 @@ def add_item():
     new_item = Item(name, price, quantity, bought)
     add_new_item(new_item)
     return render_template('index.html', items=items)
+
+
+@app.route('/items/bought_items')
+def get_bought_items():
+    return render_template('bought.html', items=items)

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block  bought%}
+<h2>Already bought items:</h2>
+
+{% for item in items %}
+    
+{% if item.bought == True %}
+<ul> 
+    <li>{{item.name}} / {{item.price}} / {{item.quantity}}</li> 
+</ul>
+{% endif %}
+
+{% endfor %}
+
+{% endblock  %}
